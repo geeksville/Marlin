@@ -101,9 +101,9 @@
 #if ENABLED(PIDTEMP)
   // this adds an experimental additional term to the heating power, proportional to the extrusion speed.
   // if Kc is chosen well, the additional required power due to increased melting should be compensated.
-  #define PID_EXTRUSION_SCALING // kevinh turned on by makerfarm
+  // #define PID_EXTRUSION_SCALING // kevinh WAS turned on by makerfarm
   #if ENABLED(PID_EXTRUSION_SCALING)
-    #define DEFAULT_Kc (1) //heating power=Kc*(e_speed) // kevinh note was 100
+    #define DEFAULT_Kc (100) //heating power=Kc*(e_speed) // kevinh note was 100 in master, makerfarm picked 1
     #define LPQ_MAX_LEN 50
   #endif
 #endif

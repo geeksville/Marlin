@@ -341,7 +341,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED // kevinh enabled because I have a mosfet on my pegasus
 
 //#define BED_LIMIT_SWITCHING
 
@@ -367,11 +367,11 @@
   //#define  DEFAULT_bedKi 1.41
   //#define  DEFAULT_bedKd 1675.16
 
-  //12v 8" Maker Farm Heat bed with 4mm Glass
+  //12v 10" Maker Farm Heat bed with 4mm Glass
   //from pidautotune
-  #define  DEFAULT_bedKp 644.48
-  #define  DEFAULT_bedKi 117.07
-  #define  DEFAULT_bedKd 886.96
+  #define  DEFAULT_bedKp 482.41
+  #define  DEFAULT_bedKi 94.98
+  #define  DEFAULT_bedKd 612.53
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -493,7 +493,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.19, 80.19, 400, 90 } // kevinh makerfarm, I _think_ 400 is correct for my leadscrews
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.19, 80.19, 800, 90 } // kevinh makerfarm claims 400 for leadscrews, but 800 is actually correct
 
 /**
  * Default Max Feed Rate (mm/s)
