@@ -1531,8 +1531,8 @@ void kill_screen(const char* lcd_msg) {
         #endif
         lcd_synchronize();
       }
-
-    #elif ENABLED(PROBE_MANUALLY)
+    #endif
+    #if ENABLED(PROBE_MANUALLY)
 
       bool lcd_wait_for_move;
 
@@ -1580,7 +1580,7 @@ void kill_screen(const char* lcd_msg) {
 
             //
             // The last G29 will record and enable but not move.
-            // Since G29 is deferred, 
+            // Since G29 is deferred,
             //
             lcd_wait_for_move = true;
             enqueue_and_echo_commands_P(PSTR("G29 V1"));
@@ -1847,7 +1847,7 @@ void kill_screen(const char* lcd_msg) {
      */
     void _lcd_ubl_validate_custom_mesh() {
       char UBL_LCD_GCODE[24];
-      const int temp = 
+      const int temp =
         #if WATCH_THE_BED
           custom_bed_temp
         #else
