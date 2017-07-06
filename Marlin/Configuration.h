@@ -455,8 +455,8 @@
   // put diode between endstop pin and the probe, with the cathode stripe facing the probe (so current can only flow towards the probe).
   // Do not enable if instead using a voltage divider
   // Use M119 to check the status of the probe signals
-  //#define ENDSTOPPULLUP_ZMIN
-  //#define ENDSTOPPULLUP_ZMIN_PROBE
+  #define ENDSTOPPULLUP_ZMIN
+  #define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
