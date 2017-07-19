@@ -62,8 +62,8 @@
  * If you get false positives for "Thermal Runaway" increase THERMAL_PROTECTION_HYSTERESIS and/or THERMAL_PROTECTION_PERIOD
  */
 #if ENABLED(THERMAL_PROTECTION_HOTENDS)
-  #define THERMAL_PROTECTION_PERIOD 60        // Seconds - kevinh, was 40 in master and 90 from makerfarm
-  #define THERMAL_PROTECTION_HYSTERESIS 8     // Degrees Celsius, kevinh - was 4
+  #define THERMAL_PROTECTION_PERIOD 60        // Seconds - Prusa uses 45/15 so good enough for me...
+  #define THERMAL_PROTECTION_HYSTERESIS 15     // Degrees Celsius
 
   /**
    * Whenever an M104 or M109 increases the target temperature the firmware will wait for the
