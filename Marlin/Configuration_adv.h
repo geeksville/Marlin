@@ -63,7 +63,7 @@
  */
 #if ENABLED(THERMAL_PROTECTION_HOTENDS)
   #define THERMAL_PROTECTION_PERIOD 60        // Seconds - Prusa uses 45/15 so good enough for me...
-  #define THERMAL_PROTECTION_HYSTERESIS 15     // Degrees Celsius
+  #define THERMAL_PROTECTION_HYSTERESIS 20     // Degrees Celsius
 
   /**
    * Whenever an M104 or M109 increases the target temperature the firmware will wait for the
@@ -74,7 +74,7 @@
    * If you get false positives for "Heating failed" increase WATCH_TEMP_PERIOD and/or decrease WATCH_TEMP_INCREASE
    * WATCH_TEMP_INCREASE should not be below 2.
    */
-  #define WATCH_TEMP_PERIOD 40                // Seconds, kevinh, was 20/2 but caused false failures when rapidly bumping up temps while extruding
+  #define WATCH_TEMP_PERIOD 60                // Seconds, kevinh, was 20/2 but caused false failures when rapidly bumping up temps while extruding
   #define WATCH_TEMP_INCREASE 4               // Degrees Celsius
 #endif
 
